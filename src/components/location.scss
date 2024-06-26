@@ -1,0 +1,184 @@
+@import "../responsive.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 5%;
+
+  @include sm {
+    margin-top: 5%;
+  }
+  @include md{
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include sm {
+      flex-direction: column;
+      gap: 10px;
+    }
+    @include md{
+      flex-direction: column;
+    }
+
+    .input-label {
+      font-weight: light;
+      margin-bottom: 0px;
+      margin: 0%;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      //position: relative;
+
+      &.waypoint-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        width: 100%;
+         .geocoder-container{
+          width: 100%;
+         }
+
+        .waypoint-button {
+          border: none;
+          background-color: #007bff;
+          color: white;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex-shrink: 0;
+          margin-left: 10px;
+        }
+      }
+
+      // @include sm {
+      //   &.waypoint-field {
+      //     width: 100%;
+      //     .waypoint-input {
+      //       max-width: calc(100%); /* Adjust width for smaller screens */
+      //     }
+
+      //     .waypoint-button {
+      //       width: 24px;
+      //       height: 24px;
+      //     }
+      //   }
+      // }
+    }
+
+    .add-waypoint-container {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+
+      @include sm {
+        justify-content: flex-end;
+        padding-right: 0px;
+      }
+
+      .add-waypoint {
+        border: 1px solid black;
+        color: black;
+        border-radius: 50%;
+        background-color: transparent;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+
+
+    @include sm {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+    @include md{
+      flex-direction: column;
+    }
+
+    .calculate {
+      border-radius: 40px;
+      width: 120px;
+      height: 50px;
+      font-size: large;
+    }
+  }
+}
+
+.metrics {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10%;
+  padding: 5% 5%;
+
+  .distance,
+  .estimated-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  span:first-child {
+    font-weight: bold;
+  }
+
+  span:last-child {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  @include sm{
+    .distance,
+    .estimated-time {
+      font-size: 16px;
+    }
+
+    span:last-child {
+      font-size: 18px;
+    }
+  }
+}
+
+.footer {
+  border: 0.5px solid rgb(225, 225, 225);
+  margin-top: 0%;
+
+  p {
+    padding-top: 0%;
+    font-size: 1rem;
+    color: black;
+
+    @include sm{
+      font-size: 0.9rem;
+    }
+  }
+}

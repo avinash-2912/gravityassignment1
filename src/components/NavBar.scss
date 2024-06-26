@@ -1,0 +1,12 @@
+@import "../responsive.scss";
+img {
+    padding-top: 15px;
+    height: 69px;
+    width: 160px;
+    padding-left: 67px;
+  
+    @include sm{
+        padding-left: 10px;
+    }
+  }
+  
